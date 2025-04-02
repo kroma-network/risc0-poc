@@ -1,2 +1,2 @@
 pub const RISC0_FAULT_PROOF_ID: [u32; 8] = [3109218065, 2322790025, 1533793323, 84163549, 2760183676, 1342564663, 2365363591, 2485629203];
-pub const RISC0_FAULT_PROOF_ELF: &[u8] = include_bytes!("./fault-proof.bin");
+pub const RISC0_FAULT_PROOF_ELF: &[u8] = include_bytes!("../elf/fault-proof.bin");

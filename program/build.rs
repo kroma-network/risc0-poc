@@ -1,4 +1,4 @@
-const FAULT_PROOF_BIN_PATH: &str = "src/fault-proof.bin";
+const FAULT_PROOF_BIN_PATH: &str = "elf/fault-proof.bin";
 
 fn get_methods_rs_path() -> String {
     std::env::var("OUT_DIR").unwrap() + "/methods.rs"
