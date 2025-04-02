@@ -26,6 +26,9 @@ kona-proof = { git = "https://github.com/kroma-network/kona", branch = "feat/sup
 kona-derive = { git = "https://github.com/kroma-network/kona", branch = "feat/support-pectra" }
 kona-mpt = { git = "https://github.com/kroma-network/kona", branch = "feat/support-pectra" }
 
+# sp1
+op-succinct-client-utils = { git = "https://github.com/kroma-network/op-succinct", branch = "feat/support-pectra" }
+
 # Always optimize; building and running the guest takes much longer without optimization.
 [profile.dev]
 opt-level = 3
