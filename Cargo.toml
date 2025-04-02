@@ -1,6 +1,30 @@
 [workspace]
 resolver = "2"
-members = ["host", "program"]
+members = ["host", "program", "program/fault-proof"]
+
+[workspace.dependencies]
+cfg-if = "1.0.0"
+serde_json = { version = "1.0.117", default-features = false }
+log = "0.4.22"
+
+# ethereum
+alloy-consensus = { git = "https://github.com/kroma-network/alloy", default-features = false, branch = "feat/support-pectra" }
+alloy-eips = { git = "https://github.com/kroma-network/alloy", default-features = false, branch = "feat/support-pectra" }
+alloy-primitives = { version = "0.8.12", default-features = false, features = [
+    "sha3-keccak",
+] }
+
+# optimism
+op-alloy-consensus = { git = "https://github.com/kroma-network/op-alloy", default-features = false, branch = "feat/support-pectra" }
+op-alloy-genesis = { git = "https://github.com/kroma-network/op-alloy", default-features = false, features = [
+    "serde",
+], branch = "feat/support-pectra" }
+
+# kona
+kona-executor = { git = "https://github.com/kroma-network/kona", branch = "feat/support-pectra" }
+kona-proof = { git = "https://github.com/kroma-network/kona", branch = "feat/support-pectra" }
+kona-derive = { git = "https://github.com/kroma-network/kona", branch = "feat/support-pectra" }
+kona-mpt = { git = "https://github.com/kroma-network/kona", branch = "feat/support-pectra" }
 
 # Always optimize; building and running the guest takes much longer without optimization.
 [profile.dev]

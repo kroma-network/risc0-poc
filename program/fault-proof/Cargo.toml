@@ -3,7 +3,27 @@ name = "fault-proof"
 version = "0.1.0"
 edition = "2021"
 
-[workspace]
-
 [dependencies]
-risc0-zkvm = { version = "^2.0.1", default-features = false, features = ['std'] }
+cfg-if.workspace = true
+serde_json.workspace = true
+log.workspace = true
+
+# ethereum
+alloy-consensus.workspace = true
+alloy-eips.workspace = true
+alloy-primitives.workspace = true
+
+# optimism
+op-alloy-consensus.workspace = true
+op-alloy-genesis.workspace = true
+
+# kona
+kona-executor.workspace = true
+kona-proof.workspace = true
+kona-derive.workspace = true
+kona-mpt.workspace = true
+
+# risc0
+risc0-zkvm = { version = "^2.0.1", default-features = false, features = [
+    'std',
+] }
