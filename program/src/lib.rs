@@ -1,1 +1,2 @@
-include!(concat!(env!("OUT_DIR"), "/methods.rs"));
+pub const RISC0_FAULT_PROOF_ID: [u32; 8] = [3785670013, 645253785, 1998249464, 2096400003, 1252033145, 29374823, 3964237047, 4263109599];
+pub const RISC0_FAULT_PROOF_ELF: &[u8] = include_bytes!("./fault-proof.bin");

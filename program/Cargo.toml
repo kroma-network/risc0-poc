@@ -8,3 +8,9 @@ risc0-build = { version = "^2.1.0" }
 
 [package.metadata.risc0]
 methods = ["fault-proof"]
+
+[features]
+default = ["rebuild-guest"]
+
+# Rebuild guest only if this feature is on.
+rebuild-guest = []
